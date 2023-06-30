@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="database">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ride_offers" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ride_offer" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="driver_id" type="xs:integer" />
+                                        <xs:element name="passengers">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="passenger_id" type="xs:integer" minOccurs="0"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="id" type="xs:integer" />
+                                        <xs:element name="start_point" type="xs:string" />
+                                        <xs:element name="end_point" type="xs:string" />
+                                        <xs:element name="start_date" type="xs:dateTime" />
+                                        <xs:element name="end_date" type="xs:dateTime" />
+                                        <xs:element name="nb_seat" type="xs:integer" />
+                                        <xs:element name="deletion_date" type="xs:dateTime" nillable="true" minOccurs="0"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ride_requests" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ride_request" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="passenger_id" type="xs:integer" />
+                                        <xs:element name="id" type="xs:integer" />
+                                        <xs:element name="start_point" type="xs:string" />
+                                        <xs:element name="end_point" type="xs:string" />
+                                        <xs:element name="start_date" type="xs:dateTime" />
+                                        <xs:element name="end_date" type="xs:dateTime" />
+                                        <xs:element name="deletion_date" type="xs:dateTime" nillable="true" minOccurs="0"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="users" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="user" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="id" type="xs:integer" />
+                                        <xs:element name="name" type="xs:string" />
+                                        <xs:element name="lastname" type="xs:string" />
+                                        <xs:element name="email" type="xs:string" />
+                                        <xs:element name="password" type="xs:string" />
+                                        <xs:element name="is_admin" type="xs:boolean" />
+                                        <xs:element name="deletion_date" type="xs:dateTime" nillable="true" minOccurs="0" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                    
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema_db.xsd">
+  <ride_offers>
+    <ride_offer>
+      <driver_id>1</driver_id>
+      <passengers/>
+      <id>1</id>
+      <start_point>Paris</start_point>
+      <end_point>Reims</end_point>
+      <start_date>1996-11-08T09:00:00</start_date>
+      <end_date>2023-05-24T00:00:00</end_date>
+      <nb_seat>4</nb_seat>
+    </ride_offer>
+    <ride_offer>
+      <driver_id>1</driver_id>
+      <passengers/>
+      <id>2</id>
+      <start_point>Nantes</start_point>
+      <end_point>Bordeaux</end_point>
+      <start_date>1996-11-08T09:00:00</start_date>
+      <end_date>2023-05-24T00:00:00</end_date>
+      <nb_seat>2</nb_seat>
+    </ride_offer>
+  </ride_offers>
+  <ride_requests/>
+  <users>
+    <user>
+      <id>1</id>
+      <name>samuel</name>
+      <lastname>chicha</lastname>
+      <email>samuel.chicha@etudiant.univ-reims.fr</email>
+      <password>root</password>
+      <is_admin>true</is_admin>
+    </user>
+  </users>
+</database>
